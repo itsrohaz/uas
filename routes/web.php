@@ -19,20 +19,35 @@ Route::get('/siswa', function(){
     echo 'siswa';
 });
 
-//Route::group(['prefix' => 'belajar'], function(){...});
+Route::get('/home', function () {
+    return view('home');
+});
 
-//Route::get('/', function (){
-    //return view(view:'welcome');
-//});
+Route::get('/about', function () {
+    return view('about');
+});
 
-//Route::get('/home', function (){
-    //return view(view:'index');
-//});
+Route::get('/class', function () {
+    return view('class');
+});
 
-//Route::get('/kontak/{hp?}', function ($hp){
-    //return view(view:'kontak', ['handphone' => $hp]);
-//});
+Route::get('/teacher', function () {
+    return view('teacher');
+});
 
-//Route::get('/tentang-kami', function (){
-    //return view(view:'tentang');
-//});
+Route::get('/students', function () {
+    return view('students');
+});
+
+Route::get('/cadangan', function () {
+    return view('cadangan');
+});
+//CRUD
+Route::get('student', 'StudentController@index');
+
+
+
+
+
+
+
